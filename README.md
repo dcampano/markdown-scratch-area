@@ -7,13 +7,13 @@ Install
 -------
 
 	git clone git@github.com:dcampano/heroku-pinger.git
+	cd heroku-pinger
 	heroku apps:create my-heroku-pinger -s cedar
-	git remote add heroku {YOUR_HEROKU_GIT_URL}
 
 Only thing you need to set up is the PING_SITES variable, which is a comma-seperated string of hostnames
 
 	heroku config:add PING_SITES="test.herokuapp.com,myotherapp.heroku.com"
-	heroku push heroku master
+	git push heroku master
 
 Last step is to scale the worker process so that there is a process running
 
